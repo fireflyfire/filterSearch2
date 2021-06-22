@@ -1,1 +1,0 @@
-var list,filter,index;function handleFilter(){let e=list.filter((e=>{let t=!0;for(const l in filter)if(t=t&&-1!=e[l].indexOf(filter[l]),!t)break;return t}));postMessage({data:e,index}),e=null,list=null,filter=null,index=null}self.addEventListener("message",(function(e){list=e.data.data,filter=e.data.filter,index=e.data.index,handleFilter()}));
